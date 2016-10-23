@@ -15,17 +15,10 @@ Our project aims to model the refugee movement flows from Syrian refugees to all
 
 There are different generalization approaches conceivable when it comes to generalization of our model: first, the simulation could help in the development of future migration and boarder policies by understanding and orchestrating modifiable factors of refugee movement. Furthermore, the same model could be applied to estimate the number of asylum seekers in countries that lack empirical data of historic refugee movement flows.
 
-(States your motivation clearly: why is it important / interesting to solve this problem?)
-(Add real-world examples, if any)
-(Put the problem into a historical context, from what does it originate? Are there already some proposed solutions?)
-
 Source:
 https://s3.amazonaws.com/unhcrsharedmedia/2016/2016-06-20-global-trends/2016-06-14-Global-Trends-2015.pdf
 
 ## The Model
-
-(Define dependent and independent variables you want to study. Say how you want to measure them.)
-(Why is your model a good abstraction of the problem you want to study?) (Are you capturing all the relevant aspects of the problem?)
 
 In order to model the decision-making process of Syrian refugees we take a sequential two-step-approach. In the first step, we try to model the probability, that a Syrian decides to leave the country in order to obtain the total number of Syrian refugees. In the second step, we model the distribution of the total number of Syrian refugees among the European countries of destination, given the number of total refugees that we determined in step 1. Although in reality, refugees might consider these two decisions of whether to leave their country of origin or not and where to go simultaneously and not sequentially, it allows us to reduce model complexity while not loosing to much model accuracy.
 
@@ -45,9 +38,6 @@ http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-mig
 
 ## Research Methods
 
-(Cellular Automata, Agent-Based Model, Continuous Modeling...) (If you are not sure here: 1. Consult your colleagues, 2. ask the teachers, 3. remember that you can change it afterwards)
-(families travel together and the gender or age is not the most important aspect)
-
 We will approach the problem from global perspective, focussing on the flow between countries, their capacities and how they affect the refugee distribution with time.
 
 In literature, different model approaches are used for simulating migration and people movements. One of them is the metapopulation model for migration that represents each country with the nodes that have limited capacities. This model helps to find the bottlenecks and how they affect the final distribution. Furthermore, the metapopulation method can be used to estimate the long time limit but it’s also perfect for time series, which is our goal.
@@ -61,9 +51,6 @@ Source: http://www.yourarticlelibrary.com/population-geography/4-general-theorie
 
 ## Fundamental Questions
 
-(At the end of the project you want to find the answer to these questions)
-(Formulate a few, clear questions. Articulate them in sub-questions, from the more general to the more specific.)
-
 - How do Syrian refugees distribute among European countries depending on violence rate in their country?
 
 - How can the Syrian refugee movement flow be modified to direct them into specific European areas?
@@ -74,8 +61,6 @@ Source: http://www.yourarticlelibrary.com/population-geography/4-general-theorie
 
 
 ## Expected Results
-
-(What are the answers to the above questions that you expect to find before starting your research?)
 
 Step 1 - Modeling Syrians' decision to leave the country:
 Considering the decision whether to leave Syria, we rather expect the violence rate to be the main driver of refugees leaving their country than economic conditions. 
@@ -95,13 +80,7 @@ When training our model on historic data but leaving 2015 out of the training sa
 
 [3]"4 General Theories of Migration – Explained!", YourArticleLibrary.com: The Next Generation Library, 2014. [Online]. Available: http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-migration-explained/43257/. [Accessed: 23- Oct- 2016].
 
-(Add the bibliographic references you intend to use)
-(Explain possible extension to the above models)
-(Code / Projects Reports of the previous year)
-
 ## Other
-
-(mention datasets you are going to use)
 
 ### Refugee data
 #### Time series data (origin country, country of asylum, monthly basis) 1960-2015
