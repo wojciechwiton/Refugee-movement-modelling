@@ -5,6 +5,7 @@
 > * Project Title: Syrian Refugees movement modelling
 
 ## General Introduction
+“We are facing the biggest refugee and displacement crisis of our time. Above all, this is not just a crisis of numbers; it is also a crisis of solidarity.”
 
 In recent years we have been experiencing increased movement of refugees from Syria. That was caused mainly by the unstable political situation, i.e., ongoing armed conflict. A lot of people looking for an asylum have chosen Europe as a stable place to live due to the decent location and economic conditions.
 This has caused the refugee crisis in 2015, due to unexpected growth of refugee number in the western europe. The uncontrollable and unpredicted movement became a political challenge for all european countries and have affected border policies and even resumption of border controls between some countries.
