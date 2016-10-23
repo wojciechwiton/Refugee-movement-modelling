@@ -57,7 +57,9 @@ We expect to obtain the prediction that matches the amount of refugees in europe
 ## References 
 
 [1]D. Groen, "Simulating Refugee Movements: Where would You Go?", Procedia Computer Science, vol. 80, pp. 2251-2255, 2016.
+
 [2]J. Lewer and H. Van den Berg, "A gravity model of immigration", Economics Letters, vol. 99, no. 1, pp. 164-167, 2008.
+
 [3]"4 General Theories of Migration – Explained!", YourArticleLibrary.com: The Next Generation Library, 2014. [Online]. Available: http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-migration-explained/43257/. [Accessed: 23- Oct- 2016].
 
 (Add the bibliographic references you intend to use)
