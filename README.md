@@ -6,23 +6,33 @@
 
 ## General Introduction
 “We are facing the biggest refugee and displacement crisis of our time. Above all, this is not just a crisis of numbers; it is also a crisis of solidarity.”
+- Ban Ki Moon, United Nations Secretary General
 
-In recent years we have been experiencing increased movement of refugees from Syria. That was caused mainly by the unstable political situation, i.e., ongoing armed conflict. A lot of people looking for an asylum have chosen Europe as a stable place to live due to the decent location and economic conditions.
-This has caused the refugee crisis in 2015, due to unexpected growth of refugee number in the western europe. The uncontrollable and unpredicted movement became a political challenge for all european countries and have affected border policies and even resumption of border controls between some countries.
-The project aims to model the refugee movement based on the fighting data in the country of origin - Syria, to predict the distribution of refugees among european countries. The model that would be reliable and trustworthy could help in future decision making to avoid future troubles by redirecting the flow of migration or predicting the necessary resources in the given country. Furthermore the refugee datasets are incomplete and the same model could be used to estimate the number of asylum seekers in countries that lack the empirical data.
+The number of refugees has increased significantly in recent years and reached 21.3 millions in 2015. Unstable political situation, ongoing armed conflict and persecution influence refugees' decision-making process of leaving their country. Almost one fourth (4.9 million) of all refugees originate from the Syrian Arab Republic. 
+A lot of people looking for an asylum have chosen Europe as a stable place to live thanks to its decent location and economic conditions. The uncontrollable and unpredicted movement became a political challenge for all european countries and finally lead to the European refugee crisis in 2015. European countries reacted by changing border policies and even resumption of border controls between some countries.
+
+Our project aims to model the refugee movement flows from Syrian refugees to all European countries of destination. Having an accurate model, we can examine to what extent different factors affect the number of refugees leaving Syria. Besides, the modelling the decision-making process of choosing a country of destination will reveal insides, which factors affect the competitive attractiveness of European countries.
+
+There are different generalization approaches conceivable when it comes to generalization of our model: first, the simulation could help in the development of future migration and boarder policies by understanding and orchestrating modifiable factors of refugee movement. Furthermore, the same model could be applied to estimate the number of asylum seekers in countries that lack empirical data of historic refugee movement flows.
 
 (States your motivation clearly: why is it important / interesting to solve this problem?)
 (Add real-world examples, if any)
 (Put the problem into a historical context, from what does it originate? Are there already some proposed solutions?)
+Source:
+https://s3.amazonaws.com/unhcrsharedmedia/2016/2016-06-20-global-trends/2016-06-14-Global-Trends-2015.pdf
 
 ## The Model
 
 (Define dependent and independent variables you want to study. Say how you want to measure them.)
 (Why is your model a good abstraction of the problem you want to study?) (Are you capturing all the relevant aspects of the problem?)
 
+Our model covers to independent aspects.
+
 There are plenty of different datasets that have been created after the crisis, hence we aim to use the migration data to estimate the current capacities between different countries. Our model would also include the fighting measures in Syria as input to estimate the number of incoming refugees.
 The fighting can be measured as a number of deaths resulted from fighting in Syria - this would be our model repulsive force from the country of refugees’ origin. The attraction force of refugees towards each country will depend on the following characteristics: GDP, human development index, population of the country, border policy, neighboring countries, distance from origin to the country, number of refugees already in the country.
 As output we will predict the amount of refugees in given country of Europe at any specific time.
+
+http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-migration-explained/43257/
 
 ## Research Methods
 
