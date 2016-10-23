@@ -18,6 +18,7 @@ There are different generalization approaches conceivable when it comes to gener
 (States your motivation clearly: why is it important / interesting to solve this problem?)
 (Add real-world examples, if any)
 (Put the problem into a historical context, from what does it originate? Are there already some proposed solutions?)
+
 Source:
 https://s3.amazonaws.com/unhcrsharedmedia/2016/2016-06-20-global-trends/2016-06-14-Global-Trends-2015.pdf
 
@@ -26,12 +27,20 @@ https://s3.amazonaws.com/unhcrsharedmedia/2016/2016-06-20-global-trends/2016-06-
 (Define dependent and independent variables you want to study. Say how you want to measure them.)
 (Why is your model a good abstraction of the problem you want to study?) (Are you capturing all the relevant aspects of the problem?)
 
-Our model covers to independent aspects.
+In order to model the decision-making process of Syrian refugees we take a sequential two-step-approach. In the first step, we try to model the probability, that a Syrian decides to leave the country in order to obtain the total number of Syrian refugees. In the second step, we model the distribution of the total number of Syrian refugees among the European countries of destination, given the number of total refugees that we determined in step 1. Although in reality, refugees might consider these two decisions of whether to leave their country of origin or not and where to go simultaneously and not sequentially, it allows us to reduce model complexity while not loosing to much model accuracy.
 
-There are plenty of different datasets that have been created after the crisis, hence we aim to use the migration data to estimate the current capacities between different countries. Our model would also include the fighting measures in Syria as input to estimate the number of incoming refugees.
-The fighting can be measured as a number of deaths resulted from fighting in Syria - this would be our model repulsive force from the country of refugees’ origin. The attraction force of refugees towards each country will depend on the following characteristics: GDP, human development index, population of the country, border policy, neighboring countries, distance from origin to the country, number of refugees already in the country.
+Our model will be trained on empirical data in order to approximate reality fair enough. Hereby, all our indicators are incorporated as time series into the model. A holdout sample of the nearby past will allow us to examine model performance and drawbacks of our simulation. 
+
+
+Step 1 - Modeling Syrians' decision to leave the country:
+
+Our model approach includes measures of the political and the economic conditions in Syria in order to estimate the number of refugees leaving the country. Among others, different indicators such as the number of attacks, the number of deaths, the number of prisoners,the human development index and the GDP will be incorporated in the model.
+
+
+Step 2 - Modeling the distribution of refugees among European countries
+
+In order to simulate the competitive attractiveness of each European country, the following indicators are used: GDP, human development index, population of the country, border policy, neighboring countries, distance from origin to the country, number of refugees already in the country.
 As output we will predict the amount of refugees in given country of Europe at any specific time.
-
 http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-migration-explained/43257/
 
 ## Research Methods
@@ -41,28 +50,41 @@ http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-mig
 
 We will approach the problem from global perspective, focussing on the flow between countries, their capacities and how they affect the refugee distribution with time.
 
-Hence, we have decided to use the metapopulation model for migration that represents each country with the nodes that have limited capacities. This model helps to find the bottlenecks and how they affect the final distribution. Furthermore, the metapopulation method can be used to estimate the long time limit but it’s also perfect for time series, which is our goal.
-OR
-Hence, we have decided to use the Stouffer’s Theory of Mobility that claims that number of refugees in the examined country is directly proportional to the number of opportunities there and inversely proportional to the number of opportunities between the origin and the given country.
+In literature, different model approaches are used for simulating migration and people movements. One of them is the metapopulation model for migration that represents each country with the nodes that have limited capacities. This model helps to find the bottlenecks and how they affect the final distribution. Furthermore, the metapopulation method can be used to estimate the long time limit but it’s also perfect for time series, which is our goal.
+In this model, the fighting can be measured as a number of deaths resulted from fighting in Syria - this would be our model repulsive force from the country of refugees’ origin. The attraction force of refugees towards each country will depend on the indicators of step 2.
 
+Another model that we like to look at is the Stouffer’s Theory of Mobility that claims that the number of refugees in the examined country is directly proportional to the number of opportunities there and inversely proportional to the number of opportunities between the origin and the given country.
+
+Finally, a modified version of the Gravity model could be applied to simulate our setting. In such a modified model we assume, that flows are directly proportional to the attractiveness of the country of destination and the inverse of the product of the country of origin and the square of the distance between an origin-destination pair. 
+
+Source: http://www.yourarticlelibrary.com/population-geography/4-general-theories-of-migration-explained/43257/
 
 ## Fundamental Questions
 
 (At the end of the project you want to find the answer to these questions)
 (Formulate a few, clear questions. Articulate them in sub-questions, from the more general to the more specific.)
 
-How does the Syrian refugees distribute among european countries depending on fighting in their country?
-How can the Syrian refugee movement flow be modified to direct them into specific European areas?
-How would stop of fighting affect the flow? Would there be any backflow?
-Is there some maximum fighting rate that the income of refugees wouldn’t increase?
+- How do Syrian refugees distribute among European countries depending on violence rate in their country?
+
+- How can the Syrian refugee movement flow be modified to direct them into specific European areas?
+
+- Is there a different proportional distribution to the countries of destination when varying the absolute number of refugees leaving Syria?
+
+- How does the violence rate affect the upcoming flow of refugees? (What factors drive backflow of refugees)? Does the refugee flow have a saturation point after which it does not further increase?
 
 
 ## Expected Results
 
 (What are the answers to the above questions that you expect to find before starting your research?)
 
-We expect to obtain the prediction that matches the amount of refugees in european countries from our datasets.
+Step 1 - Modeling Syrians' decision to leave the country:
+Considering the decision whether to leave Syria, we rather expect the violence rate to be the main driver of refugees leaving their country than economic conditions. 
 
+Step 2 - Modeling the distribution of refugees among European countries
+In the process of choosing a country of destination, we assume that border policies and economic conditions will have a significant influence.
+
+Model accuracy:
+When training our model on historic data but leaving 2015 out of the training sample for evaluation purposes, our prediction accuracy might perform not as good as supposed to. This is caused by the big increase of refugees in 2015, which makes us predict values with our model that are outside the training values. 
 
 
 ## References 
