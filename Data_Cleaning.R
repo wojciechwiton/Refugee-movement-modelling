@@ -69,7 +69,12 @@ levels(f$GEO) <- f_countries
 f<-f[,c(1,2,7)] #select  TIME           GEO  Value
 refugees_unempl_viol_foreign<-merge(x = refugees_unempl_viol, y = f, by.x= c("Year","Country"), by.y=c("TIME","GEO"), all.x = TRUE) # left outer join to not loose 2010
 View(refugees_unempl_viol_foreign)
-
+#change column name
+cols<-colnames(refugees_unempl_viol_foreign)
+cols[6] <-"Number_of_Syrians_in_country"
+colnames(refugees_unempl_viol_foreign)<-cols
+colnames(refugees_unempl_viol_foreign)
+´#####
 ´#####
 
 
