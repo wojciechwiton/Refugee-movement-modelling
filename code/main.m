@@ -9,8 +9,17 @@ for i=1:fileListsize
 end
 
 delimiter = ';';
-headers = 1;
-%A = dlmread(filePaths(1),delimiter);
-% A = importdata(filePaths(1), delimiter, headers);
-fileID = fopen(filePaths(7));
-GDP = textscan(fileID,'%s%s', 'Delimiter', ',');
+
+fileID = fopen(filePaths(3));
+% field = textscan(fileID, '%s', 8, 'Delimiter', delimiter);
+% field = field{1,1};
+field = textscan(fileID, '%s%s%s%s%s%s%s%s', 1, 'Delimiter', delimiter);
+field = horzcat(field{:});
+value = textscan(fileID, '%s%s%s%s%s%s%s%s', 'Delimiter', delimiter);
+value = horzcat(value{:});
+
+for i=2:8
+    field(i) = strcat('year', field(i));
+end
+
+GDP = cell2struct(value, field, 2);
