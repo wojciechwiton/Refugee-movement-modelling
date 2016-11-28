@@ -1,8 +1,8 @@
 #Build cleaned dataset
 ########################################################################################################
 # Start with refugee flows from Syria to European countries:
-refugees_all<-read.csv(file="Syrian_Refugees_2000-2015_toEU.csv",skip=2, header=TRUE)
-refugees <- refugees_all[,c(1,2,11)]
+refugees_all<-read.csv(file="Syrian_Refugees_1980-2015_toEU.csv",skip=2, header=TRUE, sep=';')
+refugees <- refugees_all[c(1,2,11)]
 colnames(refugees)<-c("Year","Country","Population")
 
 ########################################################################################################
@@ -18,7 +18,7 @@ refugees_viol<-merge(x = refugees_year, y = deaths, by = "Year", all.x = TRUE) #
 
 ########################################################################################################
 #add unemployment
-unemployment<-read.csv(file="Unemployment_rate_2000-2015_EU28.csv")
+unemployment<-read.csv(file="Unemployment_rate_2000-2015_EU28.csv", sep=";")
 colunemp <- colnames(unemployment)
 colunemp[1]<- "Country"
 colunemp[6] <- "Year"
@@ -47,7 +47,7 @@ row.names(refugees_unempl_viol)
 
 ########################################################################################################
 #add foreigner information
-foreigners<-read.csv(file="Foreign_population_EU28_2014.csv",skip=0)
+foreigners<-read.csv(file="Foreign_population_EU28_2006-2015.csv", sep=";", skip=0)
 View(foreigners)
 levels(foreigners$CITIZEN)
 f <- foreigners[(foreigners$SEX=="Total" & foreigners$CITIZEN=="Syria"),]
@@ -62,21 +62,18 @@ f_countries <- levels(f$GEO)
 f_countries[!levels(f$GEO) %in% levels(refugees_unempl_viol$Country)] #print those labels that have to be changed
 levels(refugees_unempl_viol$Country)
 f_countries[c(8,12,14)]<-c("Czech Rep.","Russian Federation","Germany"  )
-"Czech Republic" --> "  "Czech Rep." "
-"Former Yugoslav Republic of Macedonia, the"  --> "Russian Federation"  
-"Germany (until 1990 former territory of the FRG)" -->   "Germany" 
+# "Czech Republic" --> "  "Czech Rep." "
+# "Former Yugoslav Republic of Macedonia, the"  --> "Russian Federation"  
+# "Germany (until 1990 former territory of the FRG)" -->   "Germany" 
 levels(f$GEO) <- f_countries
 f<-f[,c(1,2,7)] #select  TIME           GEO  Value
 refugees_unempl_viol_foreign<-merge(x = refugees_unempl_viol, y = f, by.x= c("Year","Country"), by.y=c("TIME","GEO"), all.x = TRUE) # left outer join to not loose 2010
 View(refugees_unempl_viol_foreign)
 
-´#####
-
-
 #WRITE THE TABLE AS CSV-FILE
-write.csv(refugees_unempl_viol_foreign, file="Data_cleaned.csv", sep=",")
+# write.csv(refugees_unempl_viol_foreign, file="Data_cleaned.csv", sep=";")
+write.table(refugees_unempl_viol_foreign, file="Data_cleaned.csv", sep=";", row.names = FALSE, quote = FALSE)
 #Test if it worked
-cleaned<-read.csv(file="Data_cleaned.csv", sep=",",header=TRUE)
+cleaned<-read.csv(file="Data_cleaned.csv", sep=";",header=TRUE)
 View(cleaned)
 #View(refugees_unempl_viol)
-
