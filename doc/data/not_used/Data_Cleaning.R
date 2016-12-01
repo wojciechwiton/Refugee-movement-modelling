@@ -70,6 +70,9 @@ f<-f[,c(1,2,7)] #select  TIME           GEO  Value
 refugees_unempl_viol_foreign<-merge(x = refugees_unempl_viol, y = f, by.x= c("Year","Country"), by.y=c("TIME","GEO"), all.x = TRUE) # left outer join to not loose 2010
 View(refugees_unempl_viol_foreign)
 
+temp <- read.csv(file="GDP_Europe_2010-2016.csv", sep=";", skip=0)
+
+
 #WRITE THE TABLE AS CSV-FILE
 # write.csv(refugees_unempl_viol_foreign, file="Data_cleaned.csv", sep=";")
 write.table(refugees_unempl_viol_foreign, file="Data_cleaned.csv", sep=";", row.names = FALSE, quote = FALSE)
