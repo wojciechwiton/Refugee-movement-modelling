@@ -1,0 +1,9 @@
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{lllllllllllllllllllllllllllllllllllll}
+Year & Albania & Austria & Belarus & Belgium & BosniaandHerzegovina & Bulgaria & Croatia & CzechRepublic & Denmark & Estonia & Finland & France & Germany & Greece & Hungary & Ireland & Italy & Latvia & Luxembourg & Malta & Montenegro & Netherlands & Norway & Poland & Portugal & Romania & Russia & Serbia & Slovakia & Slovenia & Spain & Sweden & Switzerland & Turkey  & Ukraine & UnitedKingdom \\
+2016 & 25      & 28627   & 248     & 9350    & 96                   & 13681    & 138     & 1080          & 14412   & 27      & 2126    & 14307  & 321811  & 15802  & 11279   & 484     & 7040  & 136    & 439        & 1194  & 55         & 33745       & 10513  & 1161   & 77       & 3246    & 9273   & 256    & 261      & 83       & 5700  & 80713  & 22267       & 8041376 & 2482    & 15998        
+\end{tabular}
+\end{table}
